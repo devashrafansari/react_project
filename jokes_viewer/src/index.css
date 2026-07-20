@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+
+.btn-increase,
+.btn-decrease {
+  padding: 12px 28px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(45, 31, 16, 0.2);
+}
+
+.btn-increase {
+  background: linear-gradient(135deg, var(--accent) 0%, #d4a574 100%);
+  color: white;
+}
+
+.btn-increase:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 124, 63, 0.4);
+}
+
+.btn-increase:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(201, 124, 63, 0.3);
+}
+
+.btn-decrease {
+  background: var(--chai-light);
+  color: var(--chai-dark);
+  border: 2px solid var(--accent);
+}
+
+.btn-decrease:hover:not(:disabled) {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 124, 63, 0.4);
+}
+
+.btn-decrease:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(201, 124, 63, 0.3);
+}
+
+.btn-decrease:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
